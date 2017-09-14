@@ -1,0 +1,8 @@
+__pycache__
+config.ini
+.idea
+*.pyc
+*.sqlite
+lib
+*_backup
+.bak

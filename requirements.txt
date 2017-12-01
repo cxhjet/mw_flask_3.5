@@ -2,20 +2,8 @@
 # create by :cxh-PC
 # create time :2017-05-08 10:02:49.566800
 ########################################
-connexion
-Flask
-Flask-Redis
-Flask-SQLAlchemy
-pymssql
-mysqlclient
-PyYAML
-redis
-SQLAlchemy
-flask-jsontools
 git+https://maxwin_ch@bitbucket.org/maxwin-inc/mwutils.git
 git+https://maxwin_ch@bitbucket.org/maxwin-inc/auth.git
 git+https://maxwin_ch@bitbucket.org/maxwin-inc/mwsdk.git
 git+https://maxwin_ch@bitbucket.org/maxwin-inc/mwpermission.git
-pyjwt
-python-consul
-flask-cors
+

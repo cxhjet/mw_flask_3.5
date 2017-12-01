@@ -1,19 +1,7 @@
-FROM python:3.5-alpine
+FROM cxhjet/flask3.5:1.1
 COPY ./requirements.txt /var/requirements.txt
-# 先裝 3.3下的freetds-dev，因Changed in version 2.1.3:
-# Version of FreeTDS Linux static libraries bundled
-# with pymssql is 0.95.95.
-RUN echo http://dl-cdn.alpinelinux.org/alpine/v3.3/main > /etc/apk/repositories \
-    && echo http://dl-cdn.alpinelinux.org/alpine/v3.3/community >> /etc/apk/repositories \
-    && apk add --no-cache --virtual .build-deps  \
-		freetds-dev \
-    && echo http://dl-cdn.alpinelinux.org/alpine/v3.4/main > /etc/apk/repositories \
-    && echo http://dl-cdn.alpinelinux.org/alpine/v3.4/community >> /etc/apk/repositories \
-    && apk add --no-cache --virtual .build-deps  \
-		gcc \
-		libc-dev \
-		linux-headers \
-		mariadb-dev \
+
+RUN  apk add --no-cache --virtual .build-deps  \
 		git \
      && pip3 install -r /var/requirements.txt \
     && find /usr/local -depth \

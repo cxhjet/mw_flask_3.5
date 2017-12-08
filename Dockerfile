@@ -3,7 +3,11 @@ COPY ./requirements.txt /var/requirements.txt
 
 RUN  apk add --no-cache --virtual .build-deps  \
 		git \
-     && pip3 install -r /var/requirements.txt \
+    && pip3 uninstall mwutils -y \
+    && pip3 uninstall mwauth -y  \
+    && pip3 uninstall mwsdk -y  \
+    && pip3 uninstall mwpermission -y \
+    && pip3 install -r /var/requirements.txt \
     && find /usr/local -depth \
 		\( \
 		    \( -type d -a -name test -o -name tests \) \

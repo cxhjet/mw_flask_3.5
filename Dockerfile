@@ -1,4 +1,4 @@
-FROM cxhjet/flask3.5:1.1
+FROM cxhjet/flask3.5:1.4
 COPY ./requirements.txt /var/requirements.txt
 
 RUN  apk add --no-cache --virtual .build-deps  \

@@ -1,7 +1,3 @@
-########################################
-# create by :cxh-PC
-# create time :2017-05-08 10:02:49.566800
-########################################
 SQLAlchemy==1.1.13
 git+https://maxwin_ch@bitbucket.org/maxwin-inc/mwutils.git
 git+https://maxwin_ch@bitbucket.org/maxwin-inc/auth.git
